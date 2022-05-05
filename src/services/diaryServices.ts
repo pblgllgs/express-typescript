@@ -1,4 +1,4 @@
-import { DiaryEntry, NonSensitiveDiaryEntry } from '../types'
+import { DiaryEntry, NewDiaryEntry, NonSensitiveDiaryEntry } from '../types'
 import diaryData from './diaries.json'
 
 const diaries: DiaryEntry[] = diaryData as DiaryEntry[]
@@ -27,6 +27,11 @@ export const findById = (id: number): NonSensitiveDiaryEntry | undefined => {
   return undefined
 }
 
-export const addEntry = (): undefined => {
-  return undefined
+export const addDiary = (newDiaryEntry: NewDiaryEntry): DiaryEntry => {
+  const newEntry = {
+    ...newDiaryEntry,
+    id: diaries.length + 1
+  }
+  diaries.push(newEntry)
+  return newEntry
 }
