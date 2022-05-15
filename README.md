@@ -4,13 +4,19 @@
 npm run dev
 ```
 
-## Run data
+## Install json-server
+
+````
+npm install json-server
+````
+
+## Run json-server post 3004
 
 ```
 json-server --watch db.json --port 3004
 ```
 
-## apis get
+## get
 
 ```
 http://localhost:3000:/api/diaries/sensitive
@@ -25,7 +31,7 @@ http://localhost:3000:/api/diaries/<ID>
 ```
 
 
-## api post
+## post
 ```
 http://localhost:3000:/api/diaries/add
 ```
